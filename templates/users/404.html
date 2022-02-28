@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body_class %}404 Error{%endblock %}
+
+{% block content %}
+
+<div class="message-404">
+    <h4 class="display-4">Sorry, that page doesn't exist! {{ request.status }}</h4>
+    <p class="m-3">
+      You can search Warbler using the search box below or
+      <a href="/"><b>return to the homepage</b></a>.</p>
+    <div class="row">
+      <div class="col-sm-8 mx-auto">
+        <form class="form-inline mb-3" action="/users">
+          <input name="q" class="form-control mb-0 mr-2" placeholder="Search Warbler">
+          <button class="btn btn-primary">Search</button>
+        </form>
+        <iframe src="https://giphy.com/embed/kF0ngyP7S1DfmzKqiN" 
+        width="560" 
+        height="560" 
+        frameBorder="0" 
+        class="giphy-embed" 
+        allowFullScreen></iframe>
+        <p><a href="https://giphy.com/gifs/error-404-not-found-kF0ngyP7S1DfmzKqiN">via GIPHY</a></p>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

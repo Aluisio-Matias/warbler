@@ -221,6 +221,7 @@ def show_likes(user_id):
         return redirect('/')
 
     user = User.query.get_or_404(user_id)
+    
     return render_template('users/likes.html', user=user, likes=user.likes)
 
 
